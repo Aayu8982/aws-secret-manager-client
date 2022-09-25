@@ -1,0 +1,27 @@
+{
+  "name": "aws-secret-manager-client",
+  "version": "1.0.0",
+  "description": "A Library for Manage AWS Secret Manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aayu8982/aws-secret-manager-client.git"
+  },
+  "keywords": [
+    "aws",
+    "secret-manager"
+  ],
+  "author": "Aayush Sharma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aayu8982/aws-secret-manager-client/issues"
+  },
+  "homepage": "https://github.com/Aayu8982/aws-secret-manager-client#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1197.0",
+    "deasync-promise": "^1.0.1"
+  }
+}
