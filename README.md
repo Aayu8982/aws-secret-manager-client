@@ -116,7 +116,7 @@ app.listen(port,()=>{
 
 #### Retrieve Secret
 
-```http
+```
   client.getSecret(SecretId) || client.getSecretSync(SecretId)
 ```
 
@@ -128,7 +128,7 @@ More Details :- https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SecretsM
 
 #### Create Secret
 
-```http
+```
   client.createSecret(params) || client.createSecretSync(params)
 ```
 
@@ -142,7 +142,7 @@ More Details :- https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SecretsM
 More Details :- https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SecretsManager.html#createSecret-property
 #### Delete Secret
 
-```http
+```
   client.deleteSecret(SecretId) || client.deleteSecretSync(SecretId)
 ```
 
@@ -154,7 +154,7 @@ More Details :- https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SecretsM
 
 #### Update Secret
 
-```http
+```
   client.updateSecret(SecretId) || client.updateSecretSync(SecretId)
 ```
 
