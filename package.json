@@ -1,7 +1,7 @@
 {
   "name": "aws-secret-manager-client",
   "version": "1.0.0",
-  "description": "A Library for Manage AWS Secret Manager",
+  "description": "A Library for Manage AWS Secret Manager using Nodejs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +12,8 @@
   },
   "keywords": [
     "aws",
-    "secret-manager"
+    "secret-manager",
+    "aws-secret-manager"
   ],
   "author": "Aayush Sharma",
   "license": "MIT",
