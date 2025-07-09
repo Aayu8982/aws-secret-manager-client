@@ -1,4 +1,5 @@
-import { SecretsManagerClient, SecretsManagerError, SecretValue } from '../SecretsManagerClient';
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+import { SecretsManagerClient, SecretsManagerError } from '../SecretsManagerClient';
 import {
   GetSecretValueCommand,
   CreateSecretCommand,
