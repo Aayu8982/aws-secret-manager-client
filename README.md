@@ -7,6 +7,9 @@
 
 A modern, TypeScript-first AWS Secrets Manager client built on AWS SDK v3. This package provides a simplified, promise-based interface for managing secrets with comprehensive error handling, logging, and type safety.
 
+[![NPM](https://nodei.co/npm/aws-secret-manager-client.png?downloads=true)](https://www.npmjs.com/package/aws-secret-manager-client/)
+
+
 ## ✨ Features
 
 - **Modern AWS SDK v3**: Built on the latest AWS SDK with improved performance and modularity
