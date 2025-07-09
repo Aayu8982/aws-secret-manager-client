@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [ master, develop ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x, 20.x]
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm install
+    
+    - name: Check formatting
+      run: npm run format:check
+    
+    - name: Run tests
+      run: npm run test:coverage
+    
+    - name: Build
+      run: npm run build
+    
+    - name: Upload coverage to Codecov
+      if: ${{ exists('./coverage/lcov.info') }}
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./coverage/lcov.info
