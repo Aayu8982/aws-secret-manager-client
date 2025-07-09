@@ -24,7 +24,7 @@ jobs:
         cache: 'npm'
     
     - name: Install dependencies
-      run: npm Install
+      run: npm install
     
     - name: Run linter
       run: npm run lint
@@ -39,6 +39,7 @@ jobs:
       run: npm run build
     
     - name: Upload coverage to Codecov
+      if: ${{ exists('./coverage/lcov.info') }}
       uses: codecov/codecov-action@v3
       with:
         file: ./coverage/lcov.info
