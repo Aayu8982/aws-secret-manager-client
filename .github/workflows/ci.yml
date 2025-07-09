@@ -34,9 +34,3 @@ jobs:
     
     - name: Build
       run: npm run build
-    
-    - name: Upload coverage to Codecov
-      if: ${{ exists('./coverage/lcov.info') }}
-      uses: codecov/codecov-action@v3
-      with:
-        file: ./coverage/lcov.info
