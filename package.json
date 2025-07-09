@@ -1,28 +1,88 @@
 {
   "name": "aws-secret-manager-client",
-  "version": "1.0.0",
-  "description": "A Library for Manage AWS Secret Manager using Nodejs",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "2.0.0",
+  "description": "Modern AWS Secrets Manager client for Node.js with TypeScript support, built on AWS SDK v3",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Aayu8982/aws-secret-manager-client.git"
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "format": "prettier --write src/**/*.ts",
+    "format:check": "prettier --check src/**/*.ts",
+    "prepublishOnly": "npm run build && npm run test",
+    "release": "semantic-release"
   },
   "keywords": [
     "aws",
-    "secret-manager",
-    "aws-secret-manager"
+    "secrets-manager",
+    "aws-sdk",
+    "secrets",
+    "security",
+    "credentials",
+    "configuration",
+    "typescript",
+    "nodejs",
+    "async",
+    "promise"
   ],
-  "author": "Aayush Sharma",
+  "author": {
+    "name": "Aayush Sharma",
+    "email": "aayu8982@gmail.com",
+    "url": "https://github.com/Aayu8982"
+  },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aayu8982/aws-secret-manager-client.git"
+  },
   "bugs": {
     "url": "https://github.com/Aayu8982/aws-secret-manager-client/issues"
   },
   "homepage": "https://github.com/Aayu8982/aws-secret-manager-client#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "dependencies": {
-    "aws-sdk": "^2.1197.0",
-    "deasync-promise": "^1.0.1"
+    "@aws-sdk/client-secrets-manager": "^3.600.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.5.1",
+    "jest": "^29.5.0",
+    "prettier": "^3.6.2",
+    "semantic-release": "^22.0.0",
+    "ts-jest": "^29.1.0",
+    "tsup": "^7.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "@aws-sdk/client-secrets-manager": "^3.600.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
